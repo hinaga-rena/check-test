@@ -1,0 +1,60 @@
+
+/* 登録ページ用タイトル */
+h2.title {
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+/* 登録フォームの入力欄グループ */
+.form-group input {
+    font-size: 15px;
+    padding: 12px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 登録ボタン */
+.register-button {
+    width: 100%;
+    background-color: #7c6b5c;
+    color: white;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #6b5a4b;
+}
+
+/* 必須マーク */
+.required {
+    color: red;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+/* エラー時の赤文字 */
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* スマホ対応 */
+@media screen and (max-width: 480px) {
+    form {
+        padding: 20px;
+    }
+
+    .register-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

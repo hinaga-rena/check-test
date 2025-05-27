@@ -1,0 +1,91 @@
+/* 共通フォントと色 */
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f2ebe3;
+    color: #5c4b3b;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2 {
+    text-align: center;
+    font-weight: normal;
+    color: #5c4b3b;
+    margin-bottom: 30px;
+}
+
+/* フォーム全体の中央揃え */
+.register-container,
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+/* フォームカード */
+form {
+    background: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* フォーム項目 */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #5c4b3b;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px 12px;
+    background-color: #f6f6f6;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* プレースホルダの色 */
+input::placeholder {
+    color: #aaa;
+}
+
+/* ボタン共通スタイル */
+button[type="submit"],
+button[type="button"] {
+    background-color: #7c6b5c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #6f5e50;
+}
+
+/* エラーメッセージ */
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 4px;
+}
