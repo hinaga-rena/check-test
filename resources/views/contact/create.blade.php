@@ -1,13 +1,15 @@
 @extends('layouts.app')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('css/common.css') }}">
     <link rel="stylesheet" href="{{ asset('css/create.css') }}">
 @endpush
 
+@section('background-color', '#fffff') {{-- ← Contact専用背景色 --}}
+@section('heading', 'Contact') {{-- ← ここでタイトルを指定 --}}
 @section('content')
+
+<div class="contact-wrapper">
 <div class="contact-container">
-    <h2>Contact</h2>
     <form method="POST" action="{{ route('contact.confirm') }}">
         @csrf
 
@@ -23,9 +25,11 @@
 
         <div class="form-group">
             <label>性別 <span class="required">※</span></label>
-            <label><input type="radio" name="gender" value="男性" {{ old('gender', '男性') == '男性' ? 'checked' : '' }}> 男性</label>
-            <label><input type="radio" name="gender" value="女性" {{ old('gender') == '女性' ? 'checked' : '' }}> 女性</label>
-            <label><input type="radio" name="gender" value="その他" {{ old('gender') == 'その他' ? 'checked' : '' }}> その他</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="男性" {{ old('gender', '男性') == '男性' ? 'checked' : '' }}> 男性</label>
+                <label><input type="radio" name="gender" value="女性" {{ old('gender') == '女性' ? 'checked' : '' }}> 女性</label>
+                <label><input type="radio" name="gender" value="その他" {{ old('gender') == 'その他' ? 'checked' : '' }}> その他</label>
+            </div>
             @error('gender') <div class="error">{{ $message }}</div> @enderror
         </div>
 
@@ -77,5 +81,6 @@
             <button type="submit" class="confirm-button">確認画面</button>
         </div>
     </form>
+</div>
 </div>
 @endsection

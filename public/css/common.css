@@ -5,6 +5,12 @@ body {
     color: #5c4b3b;
     margin: 0;
     padding: 0;
+    background-image: url('/path/to/image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
 }
 
 h1,

@@ -37,6 +37,13 @@ class ContactRequest extends FormRequest
         ];
     }
 
+    public function prepareForValidation()
+    {
+        $this->merge([
+            'tel' => $this->input('tel1') . $this->input('tel2') . $this->input('tel3'),
+        ]);
+    }
+
     public function messages(): array
     {
         return [

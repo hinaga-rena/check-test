@@ -1,32 +1,51 @@
-/* サンクスページ用 */
-.thanks-container {
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    background-color: #fff;
+    color: #5c4434;
+    position: relative;
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 60vh;
-    position: relative;
-    text-align: center;
-    padding: 40px 20px;
 }
 
-.thanks-message {
-    font-size: 20px;
-    font-weight: bold;
-    color: #5c4b3b;
-    margin-bottom: 30px;
+.thanks-wrapper {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.thanks-wrapper h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .home-button {
-    background-color: #7c6b5c;
-    color: #fff;
-    border: none;
-    padding: 10px 30px;
+    display: inline-block;
+    background-color: #5c4434;
+    color: white;
+    padding: 10px 24px;
     border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 .home-button:hover {
-    background-color: #6f5e50;
+    background-color: #8b7765;
+}
+
+.background-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 150px;
+    color: rgba(92, 68, 52, 0.04);
+    z-index: 1;
+    pointer-events: none;
+    white-space: nowrap;
+    user-select: none;
 }

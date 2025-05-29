@@ -21,7 +21,8 @@ class CreateContactsTable extends Migration
             $table->string('tel')->nullable();
             $table->string('address')->nullable();
             $table->string('building')->nullable();
-            $table->string('category'); // お問い合わせの種類
+            $table->unsignedBigInteger('category_id'); // 変更
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade'); // 追加
             $table->text('message');
             $table->timestamps();
         });

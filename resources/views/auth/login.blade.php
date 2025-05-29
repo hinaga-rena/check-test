@@ -5,7 +5,11 @@
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 @endpush
 
-@section('logout-label', 'Login')
+@section('show-logout')
+@endsection
+
+@section('logout-label', 'register')
+@section('heading', 'Login')
 
 @section('content')
 <div class="form-wrapper">

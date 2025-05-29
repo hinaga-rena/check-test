@@ -3,12 +3,25 @@
 @push('styles')
 
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-    
+
 @endpush
 
+@section('show-logout')
+@endsection
+
+@section('logout-label', 'logout')
+@section('heading', 'Admin')
+
+@if(View::hasSection('show-logout'))
+    <a href="{{ route('logout') }}"
+        onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+        style="border: 1px solid #cbfae; padding: 4px 12px; color: #cbfae; text-decoration: none;">
+        @yield('logout-label', 'logout')
+    </a>
+@endif
 @section('content')
+
 <div class="container">
-    <h2 class="title">Admin</h2>
     <form method="GET" action="{{ route('admin.index') }}" class="search-form">
     <div class="search-group">
         <input type="text" name="keyword" placeholder="名前やメールアドレスを入力してください" value="{{ request('keyword') }}">
@@ -56,7 +69,7 @@
                 <td>{{ $contact->last_name }} {{ $contact->first_name }}</td>
                 <td>{{ $contact->gender === 'male' ? '男性' : ($contact->gender === 'female' ? '女性' : 'その他') }}</td>
                 <td>{{ $contact->email }}</td>
-                <td>{{ $contact->category->name }}</td>
+                <td>{{ $contact->category->name}}</td>
                 <td>
                 <button class="detail-button"
                     data-id="{{ $contact->id }}"

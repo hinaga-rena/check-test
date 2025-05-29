@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('css/common.css') }}">
     <link rel="stylesheet" href="{{ asset('css/confirm.css') }}">
 @endpush
 
+@section('background-color', '#fffff')
+@section('heading', 'Confirm')
 @section('content')
-    <h2 class="title">Confirm</h2>
-
+    
     <form method="POST" action="{{ route('contact.store') }}">
         @csrf
 
