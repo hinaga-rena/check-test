@@ -1,0 +1,67 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fffdf9;
+    margin: 5% auto;
+    padding: 30px;
+    border: 1px solid #dcd0c0;
+    width: 60%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.modal .close {
+    color: #888;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal .close:hover {
+    color: #000;
+}
+
+.modal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.modal-table th {
+    text-align: left;
+    padding: 8px;
+    width: 180px;
+    color: #6b4f41;
+    font-weight: bold;
+}
+
+.modal-table td {
+    padding: 8px;
+    color: #333;
+}
+
+.delete-button {
+    background-color: #c4511c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #a23c0f; }

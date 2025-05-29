@@ -1,0 +1,83 @@
+/* 入力フォームページ用（Contact） */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 20px 30px;
+    align-items: center;
+}
+
+/* 項目名（左） */
+.contact-form label {
+    margin-bottom: 0;
+    font-weight: normal;
+    color: #5c4b3b;
+}
+
+/* 入力欄（右） */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 10px 12px;
+    background-color: #f6f6f6;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* ラジオボタン横並び */
+.gender-options {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.gender-options label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: normal;
+}
+
+/* 電話番号（3分割） */
+.tel-group {
+    display: flex;
+    gap: 10px;
+}
+
+.tel-group input {
+    width: 100%;
+    max-width: 120px;
+}
+
+/* セレクトボックス矢印調整（見た目強化） */
+select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%237c6b5c" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px 16px;
+}
+
+/* 確認ボタン */
+.contact-submit {
+    grid-column: 2 / 3;
+    text-align: center;
+    margin-top: 20px;
+}

@@ -1,98 +1,146 @@
+body {
+    font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+    background-color: #ffffff;
+    color: #5c4434;
+}
 
-/* テーブル */
-table {
-    width: 100%;
-    border-collapse: collapse;
+h2.title {
+    font-size: 28px;
+    text-align: center;
+    margin: 30px 0;
+    font-family: serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* フォーム全体の背景・枠・余白をなくす */
+.search-form,
+.search-form form,
+form {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+/* エクスポートフォームのボックスもリセット */
+form[action*="export"] {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
     margin-top: 20px;
 }
 
-th,
-td {
-    padding: 12px;
+/* 検索フォーム */
+.search-form .search-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    /* ← 1行に収める */
+}
+
+.search-group input[type="text"],
+.search-group input[type="date"],
+.search-group select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    min-width: 160px;
+    max-width: 160px;
+    /* ← すべて揃えて */
+}
+
+.search-group button,
+.search-group .reset-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.search-group button {
+    background-color: #8b7765;
+    color: white;
+}
+
+.search-group .reset-btn {
+    background-color: #8b7765;
+    color: #5c4434;
+    text-decoration: none;
+}
+
+/* テーブル表示 */
+.contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.contact-table th {
+    background-color: #8b7765;
+    color: white;
+    padding: 10px;
     text-align: left;
+}
+
+.contact-table td {
+    padding: 10px;
     border-bottom: 1px solid #ddd;
 }
 
-th {
-    background-color: #7c6b5c;
-    color: white;
-}
-
-/* 検索フォームやボタン */
-form input[type="text"],
-form input[type="date"],
-form select {
-    padding: 8px 12px;
-    margin-right: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    padding: 8px 16px;
-    background-color: #7c6b5c;
-    color: white;
-    border: none;
-    border-radius: 4px;
+.contact-table button.detail-button {
+    background-color: transparent;
+    border: 1px solid #d8c8b4;
+    color: #5c4434;
+    padding: 6px 12px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-button:hover {
-    background-color: #6f5e50;
+.contact-table button.detail-button:hover {
+    background-color: #f3ebe4;
 }
 
-/* モーダル背景 */
-#detail-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+/* ページネーション */
+.pagination {
+    display: flex;
     justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-/* モーダル本体 */
-#detail-modal>div {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 600px;
-    position: relative;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* 閉じるボタン */
-#modal-close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    cursor: pointer;
-    font-size: 24px;
-}
-
-/* モーダル内テーブル */
-#detail-modal table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-#detail-modal th,
-#detail-modal td {
-    text-align: left;
-    padding: 8px;
-    vertical-align: top;
-}
-
-/* 削除ボタン */
-#delete-form button {
     margin-top: 20px;
-    padding: 10px 20px;
-    background-color: brown;
+}
+
+.pagination li {
+    list-style: none;
+    margin: 0 4px;
+}
+
+.pagination a,
+.pagination span {
+    display: inline-block;
+    padding: 6px 10px;
+    color: #5c4434;
+    text-decoration: none;
+    border: 1px solid #d8c8b4;
+    border-radius: 4px;
+}
+
+.pagination .active span {
+    background-color: #8b7765;
     color: white;
-    border: none;
-    border-radius: 5px;
+    border-color: #8b7765;
 }

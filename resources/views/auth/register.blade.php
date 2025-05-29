@@ -4,9 +4,10 @@
     <link rel="stylesheet" href="{{ asset('css/register.css') }}">
 @endpush
 
+@section('logout-label', 'Register')
+
 @section('content')
-<div class="register-container">
-    <h2 class="title">Register</h2>
+<div class="form-wrapper">
 
     <form method="POST" action="{{ route('register') }}">
         @csrf
@@ -35,7 +36,7 @@
             @enderror
         </div>
 
-        <div class="form-group">
+        <div style="text-align: center;">
             <button type="submit" class="register-button">
                 登録
             </button>

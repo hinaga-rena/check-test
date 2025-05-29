@@ -1,0 +1,60 @@
+/* 確認画面用のレイアウト */
+.confirm-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+/* テーブル全体 */
+.confirm-table {
+    width: 80%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* ラベル列（左） */
+.confirm-table th {
+    background-color: #bca996;
+    color: white;
+    font-weight: normal;
+    padding: 12px 16px;
+    text-align: left;
+    width: 30%;
+}
+
+/* 値列（右） */
+.confirm-table td {
+    background-color: white;
+    color: #333;
+    padding: 12px 16px;
+    word-break: break-word;
+}
+
+/* 送信・修正ボタンのエリア */
+.confirm-buttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.confirm-buttons button,
+.confirm-buttons a {
+    display: inline-block;
+    background-color: #7c6b5c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 25px;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.confirm-buttons button:hover,
+.confirm-buttons a:hover {
+    background-color: #6f5e50;
+}

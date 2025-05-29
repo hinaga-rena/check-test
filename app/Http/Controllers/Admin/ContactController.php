@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Contact;
+use App\Models\Category;
 
 class ContactController extends Controller
 {
@@ -39,9 +40,11 @@ class ContactController extends Controller
         }
 
         // データ取得（7件ずつページネーション）
-        $contacts = $query->paginate(7)->withQueryString();
+        $contacts = $query->paginate(7);
 
-        return view('admin.index', compact('contacts'));
+        $categories = Category::all();
+
+        return view('admin.index', compact('contacts', 'categories'));
     }
 
     // CSVエクスポート（絞り込み条件も適用）

@@ -1,0 +1,32 @@
+/* サンクスページ用 */
+.thanks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    position: relative;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.thanks-message {
+    font-size: 20px;
+    font-weight: bold;
+    color: #5c4b3b;
+    margin-bottom: 30px;
+}
+
+.home-button {
+    background-color: #7c6b5c;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.home-button:hover {
+    background-color: #6f5e50;
+}
